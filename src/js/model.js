@@ -56,7 +56,7 @@ export const loadSearchResults = async function (query) {
     state.search.query = query;
 
     const data = await AJAX(`${API_URL}?search=${query}&key=${API_KEY}`); // we already have a parameter ('?') so we need the '&' to continue adding the key
-    console.log(data);
+    // console.log(data);
 
     // hovering over the array we receive from data and creating our own object for each object in the array
     state.search.results = data.data.recipes.map(rec => {
